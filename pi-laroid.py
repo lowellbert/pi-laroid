@@ -6,7 +6,7 @@ camera = PiCamera()
 camera.resolution = (3280, 2464) #Max resolution = 3280 x 2464 #print resolution = 512, 384
 
 
-def take_picture_and_print():
+#def take_picture_and_print():
     #"raspistill command details
     # -n = nopreview
     # -t = timeout : Time (in ms) before takes picture and shuts down (if not specified, set to 5s)
