@@ -17,8 +17,10 @@ camera.resolution = (3280, 2464) #Max resolution = 3280 x 2464 #print resolution
     #raspistill -n -t 200 -w 512 -h -384 -o - | lp 
 
 def main():
-    take_picture_and_print()
+    #take_picture_and_print()
     camera.start_preview()
+    sleep(5)
+    camera.stop_preview
 
 main()
 
