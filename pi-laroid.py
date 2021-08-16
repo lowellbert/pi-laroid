@@ -52,6 +52,7 @@ def camera_preview():
     sleep(5)
     camera.stop_preview
     GPIO.output(LED, GPIO.LOW)
+    sleep(1)
 
 main()
 GPIO.cleanup()
