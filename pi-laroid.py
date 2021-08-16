@@ -33,11 +33,9 @@ def main():
         if GPIO.input == 1:
             print("button pressed")
             camera_preview()
-            GPIO.cleanup()
         else:
             print("flash LED")
             turn_on_button_led()
-        GPIO.cleanup()
                 
     print("Button Status = ", GPIO.input(BUTTON))
 
@@ -54,6 +52,6 @@ def camera_preview():
     sleep(5)
     camera.stop_preview
     GPIO.output(LED, GPIO.LOW)
-    
+
 main()
 GPIO.cleanup()
