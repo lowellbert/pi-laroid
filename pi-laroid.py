@@ -30,13 +30,14 @@ def main():
     while True:
         #turn_on_button_led() 
         print("wait for button")
-        if GPIO.input(BUTTON) == 1:
+        if GPIO.input == 1:
             print("button pressed")
             camera_preview()
+            GPIO.cleanup()
         else:
             print("flash LED")
             turn_on_button_led()
-
+        GPIO.cleanup()
                 
     print("Button Status = ", GPIO.input(BUTTON))
 
@@ -49,9 +50,10 @@ def turn_on_button_led():
 
 def camera_preview():
     camera.start_preview()
+    GPIO.output(LED, GPIO.HIGH)
     sleep(5)
     camera.stop_preview
-
+    GPIO.output(LED, GPIO.LOW)
+    
 main()
 GPIO.cleanup()
-
