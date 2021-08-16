@@ -7,8 +7,8 @@ import RPi.GPIO as GPIO
 camera = PiCamera()
 camera.resolution = (3280, 2464) #Max resolution = 3280 x 2464 #print resolution = 512, 384
 
-LED = 21
-BUTTON = 16
+LED = 16
+BUTTON = 26
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(LED, GPIO.OUT)
 GPIO.setup(BUTTON, GPIO.IN)
