@@ -30,6 +30,7 @@ def main():
     while True:
         #turn_on_button_led() 
         print("wait for button")
+        print("Button Status = ", GPIO.input(BUTTON))
         if GPIO.input(BUTTON) == 1:
             print("button pressed")
             camera_preview()
