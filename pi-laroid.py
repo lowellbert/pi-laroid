@@ -26,7 +26,7 @@ GPIO.setup(BUTTON, GPIO.IN)
 
 def main():
     GPIO.output(LED, GPIO.HIGH)
-    time.sleep(1)
+    time.sleep(5)
     GPIO.output(LED, GPIO.LOW)
     time.sleep(1)
     camera_preview()
