@@ -28,11 +28,15 @@ GPIO.setup(BUTTON, GPIO.IN)
 
 def main():
     while True:
-        turn_on_button_led() 
+        #turn_on_button_led() 
+        print("wait for button")
         if BUTTON == 1:
+            print("button pressed")
             camera_preview()
         else:
+            print("flash LED")
             turn_on_button_led()
+
                 
     print("Button Status = ", GPIO.input(BUTTON))
 
