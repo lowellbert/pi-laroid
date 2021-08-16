@@ -27,14 +27,16 @@ GPIO.setup(BUTTON, GPIO.IN)
     #raspistill -n -t 200 -w 512 -h -384 -o - | lp 
 
 def main():
+    print("Button Status = ", GPIO.input(BUTTON))
+
+    turn_on_button_led()
+    camera_preview()
+    
+def turn_on_button_led():
     GPIO.output(LED, GPIO.HIGH)
-    time.sleep(5)
+    time.sleep(1)
     GPIO.output(LED, GPIO.LOW)
     time.sleep(1)
-    camera_preview()
-
-    
-
 
 def camera_preview():
     camera.start_preview()
