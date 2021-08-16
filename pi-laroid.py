@@ -20,6 +20,5 @@ def main():
     take_picture_and_print()
     camera.start_preview()
 
-
 main()
 
