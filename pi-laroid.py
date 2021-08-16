@@ -9,8 +9,10 @@ camera.resolution = (3280, 2464) #Max resolution = 3280 x 2464 #print resolution
 
 LED = 16
 BUTTON = 26
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(LED, GPIO.OUT)
+
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(LED, GPIO.OUT, initial = GPIO.LOW)
 GPIO.setup(BUTTON, GPIO.IN)
 
 
